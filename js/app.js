@@ -34,6 +34,10 @@ var pikePlace = {
       liEl.textContent = hours[i] + ": " + this.hourlyCookies[i];
       ulEl.appendChild(liEl);
     }
+    
+    var liEl_two = document.createElement('li');
+    liEl_two.textContent = 'Total: ' + this.dailyCookies;
+    ulEl.appendChild(liEl_two);
   }
 }
 
@@ -69,6 +73,10 @@ var seaTac = {
       liEl.textContent = hours[i] + ": " + this.hourlyCookies[i];
       ulEl.appendChild(liEl);
     }
+
+    var liEl_two = document.createElement('li');
+    liEl_two.textContent = 'Total: ' + this.dailyCookies;
+    ulEl.appendChild(liEl_two);
   }
 }
 
@@ -104,6 +112,10 @@ var southCenter = {
       liEl.textContent = hours[i] + ": " + this.hourlyCookies[i];
       ulEl.appendChild(liEl);
     }
+
+    var liEl_two = document.createElement('li');
+    liEl_two.textContent = 'Total: ' + this.dailyCookies;
+    ulEl.appendChild(liEl_two);
   }
 }
 
@@ -139,6 +151,10 @@ var bellevue = {
       liEl.textContent = hours[i] + ": " + this.hourlyCookies[i];
       ulEl.appendChild(liEl);
     }
+
+    var liEl_two = document.createElement('li');
+    liEl_two.textContent = 'Total: ' + this.dailyCookies;
+    ulEl.appendChild(liEl_two);
   }
 }
 
@@ -170,10 +186,14 @@ var alki = {
     var sectionEl = document.getElementById('store_data').appendChild(ulEl);
 
     for (var i = 0; i < hours.length; i++) {
-      var liEl = document.createElement('li');
-      liEl.textContent = hours[i] + ": " + this.hourlyCookies[i];
-      ulEl.appendChild(liEl);
+      var liEl_one = document.createElement('li');
+      liEl_one.textContent = hours[i] + ": " + this.hourlyCookies[i];
+      ulEl.appendChild(liEl_one);
     }
+
+    var liEl_two = document.createElement('li');
+    liEl_two.textContent = 'Total: ' + this.dailyCookies;
+    ulEl.appendChild(liEl_two);
   }
 }
 
