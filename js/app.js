@@ -13,6 +13,18 @@ function CookieShop(name, minCustomer, maxCustomer, avgCustomer) {
   shops.push(this);
 }
 
+CookieShop.prototype.generateRandom = function(min, max) {
+  return Math.random() * (max - min) + min;
+};
+
+CookieShop.prototype.generateHourly = function() {
+  for (var i = 0; i < hours.length; i++) {
+    var cookie = Math.floor(this.avgCustomer * this.randCustomer(this.minCustomer, this.maxCustomer));
+    this.hourlyCookies.push(cookie);
+    this.dailyCookies += cookie;
+  }
+};
+
 
 // ++++++++++++++++++++++++
 
