@@ -27,8 +27,13 @@ CookieShop.prototype.generateHourly = function() {
   }
 };
 
+var pikePlace = new CookieShop('Pike Place', 17, 88, 5.2);
+var seaTac = new CookieShop('SeaTac Airport', 6, 44, 1.2);
+var southCenter = new CookieShop('Southcenter Mall', 11, 38, 1.9);
+var bellevue = new CookieShop('Bellevue Square', 20, 48, 3.3);
+var alki = new CookieShop('Alki', 3, 24, 2.6);
 
-function render() {
+(function render() {
   var tbl = document.createElement('table');
   var trEl_one = document.createElement('tr');
   var thEl_one = document.createElement('th');
@@ -66,12 +71,4 @@ function render() {
     tbl.appendChild(trEl_two);
   }
   document.getElementById('store_data').appendChild(tbl);
-};
-
-var pikePlace = new CookieShop('Pike Place', 17, 88, 5.2);
-var seaTac = new CookieShop('SeaTac Airport', 6, 44, 1.2);
-var southCenter = new CookieShop('Southcenter Mall', 11, 38, 1.9);
-var bellevue = new CookieShop('Bellevue Square', 20, 48, 3.3);
-var alki = new CookieShop('Alki', 3, 24, 2.6);
-
-render();
+})();
