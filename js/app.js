@@ -19,12 +19,32 @@ CookieShop.prototype.generateRandom = function(min, max) {
 
 CookieShop.prototype.generateHourly = function() {
   for (var i = 0; i < hours.length; i++) {
-    var cookie = Math.floor(this.avgCustomer * this.randCustomer(this.minCustomer, this.maxCustomer));
+    var cookie = Math.floor(this.avgCustomer * this.generateRandom(this.minCustomer, this.maxCustomer));
     this.hourlyCookies.push(cookie);
     this.dailyCookies += cookie;
   }
 };
 
+CookieShop.prototype.render = function() {
+  console.log(this);
+  this.generateHourly();
+
+  var ulEl = document.createElement('ul');
+  ulEl.appendChild(document.createTextNode(this.name));
+  var sectionEl = document.getElementById('store_data').appendChild(ulEl);
+
+  for (var i = 0; i < hours.length; i++) {
+    var liEl = document.createElement('li');
+    liEl.textContent = hours[i] + ": " + this.hourlyCookies[i];
+    ulEl.appendChild(liEl);
+  }
+
+  var liEl_two = document.createElement('li');
+  liEl_two.textContent = 'Total: ' + this.dailyCookies;
+  ulEl.appendChild(liEl_two);
+};
+
+var pikePlace = new CookieShop('Pike Place', 17, 88, 5.2);
 
 // ++++++++++++++++++++++++
 
