@@ -80,7 +80,6 @@ function renderNew(name, minimum, maximum, average) {
 
 function renderUpdate(shop, min, max, avg) {
   var trEl = document.getElementById(shop.name.replace(' ', '').toLowerCase());
-  console.dir(shop);
 
   shop.minCustomer = min;
   shop.maxCustomer = max;
@@ -112,11 +111,14 @@ document.getElementById('new-store').addEventListener('submit', function(event) 
 
   if (exists === true) {
     renderUpdate(shops[i], min, max, avg);
-    console.log('exists');
   } else {
     renderNew(store, min, max, avg);
-    console.log('new');
   }
+
+  event.target.store.value = null;
+  event.target.min.value = null;
+  event.target.max.value = null;
+  event.target.avg.value = null;
 })
 
 var pikePlace = new CookieShop('Pike Place', 17, 88, 5.2, 'pike');
