@@ -1,3 +1,8 @@
+/* GENERAL STYLE */
+body {
+  margin: 2%;
+}
+
 /* TEXT & FONTS */
 code {
   border: 1px solid black;
@@ -6,10 +11,11 @@ code {
   padding: .5%;
   margin-left: 2%;
 }
-.h1 {font-size: 24px;}
-.h2 {font-size: 20px;}
-.h3 {font-size: 16px;}
-.p {font-size: 12px;}
+.h1 {font-size: 28px;}
+.h2 {font-size: 24px;}
+.h3 {font-size: 20px;}
+.gen-text {font-family: Georgia; font-size: 16px;}
+.data-text {font-family: Arial; font-size: 16px;}
 .hilites {font-family: 'Krona One', sans-serif;}
 .text {margin-bottom: 2%;}
 
@@ -17,7 +23,10 @@ code {
 /* COLOR PALLETTE */
 .section-color {
   height: 150px;
-  width: 1000px;
+  width: 50%;
+}
+.section-color h2 {
+  text-align: center;
 }
 .colors {
   display: inline-block;
@@ -35,3 +44,5 @@ code {
 #sec-3 {background-color: #d38547;}
 #sec-4 {background-color: #b56626;}
 #sec-5 {background-color: #8f470c;}
+#txt-1 {background-color: #ddd;}
+#txt-2 {background-color: #333;}
