@@ -1,1 +1,67 @@
-@import url('styleguide.css')
+@import url('reset.css');
+@import url('layout.css');
+@import url('styleguide.css');
+
+header {
+  margin: -.5%;
+  padding: 1em;
+  -webkit-box-shadow: 0 -10px 20px 10px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0 -10px 20px 10px rgba(0,0,0,0.25);
+  box-shadow: 0 -10px 20px 10px rgba(0,0,0,0.25);
+}
+header section {margin-bottom: 1%;}
+header section div {
+  display: inline-block;
+  width: 40%;
+  margin: auto auto;
+  margin-left: 9%;
+}
+#title-img {
+  max-width: 100%;
+}
+
+ul li, a { 
+  list-style: none; 
+  text-decoration: none;
+  display: inline-block;
+  min-width: 33%;
+  text-align: center;
+}
+li h3, li, div h3 {margin: 0;}
+a:hover {
+  color: #3d3;
+  cursor: pointer;
+}
+
+main {
+  padding-bottom: 1%;
+}
+
+footer {
+  margin: -.5%;
+  padding: 1em;
+  -webkit-box-shadow: 0 -10px 20px -10px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0 -10px 20px -10px rgba(0,0,0,0.25);
+  box-shadow: 0 -10px 20px -10px rgba(0,0,0,0.25);
+}
+
+.container {margin: 0 auto;}
+
+.content {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.company {
+  padding-top: 4%;
+  display: inline-block;
+}
+.company img {float: left;}
+.company h2, .company p {}
+
+.merchandise {
+  display: inline-block;
+}
+.merchandise img {float: right;}
+.merchandise h2, .merchandise p{}
+
