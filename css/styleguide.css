@@ -11,10 +11,10 @@ code {
   padding: .5%;
   margin-left: 2%;
 }
-.h1 {font-size: 28px;}
-.h2 {font-size: 24px;}
-.h3 {font-size: 20px;}
-.gen-text {font-family: Georgia; font-size: 16px;}
+h1 {font-size: 28px;}
+h2 {font-size: 24px;}
+h3 {font-size: 20px;}
+p, .gen-text {font-family: Georgia; font-size: 16px;}
 .data-text {font-family: Arial; font-size: 16px;}
 .hilites {font-family: 'Krona One', sans-serif;}
 .text {margin-bottom: 2%;}
