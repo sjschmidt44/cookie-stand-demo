@@ -42,18 +42,14 @@ footer {
   width: 40%;
   margin: auto auto;
 }
-#title-img {
-  max-width: 80%;
-}
+#title-img {max-width: 80%;}
 .events {text-align: center;}
 .events div {
   display: inline-block;
   max-width: 24%;
   text-align: center;
 }
-.event-pics {
-  max-width: 100%;
-}
+.event-pics {max-width: 100%;}
 .locations {text-align: center;}
 .locations div {
   display: inline-block;
@@ -76,22 +72,13 @@ footer {
 .merchandise img {float: right;}
 .merchandise h2, .merchandise p{}
 
-.nav-login, .links {
-  display: none;
-}
+.nav-login, .links {display: none;}
 
 
 /* SALES INFO */
-#table {
-  margin: 0 auto;
-
-}
-#new-store {
-  text-align: center;
-}
-fieldset > * {
-  display: inline-block;
-}
+#table {margin: 0 auto;}
+#new-store {text-align: center;}
+fieldset > * {display: inline-block;}
 .bg {
   position: fixed;
   top: -50%;
