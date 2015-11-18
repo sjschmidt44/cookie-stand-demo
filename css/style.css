@@ -10,19 +10,19 @@ header {
   box-shadow: 0 -10px 20px 10px rgba(0,0,0,0.25);
 }
 header section {
-  margin-bottom: 1%; 
+  margin-bottom: 1%;
   text-align: center;
 }
 section {margin: 2.5% auto;}
 nav {text-align: center;}
-ul li, a { 
-  list-style: none; 
+ul li, a {
+  list-style: none;
   text-decoration: none;
   display: inline-block;
   min-width: 20%;
   text-align: center;
 }
-li h3, li, div h3, figure {margin: 0;}
+li h3, li, div h3, figure, input {margin: 0;}
 a:hover {
   color: #3d3;
   cursor: pointer;
