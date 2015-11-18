@@ -3,65 +3,76 @@
 @import url('styleguide.css');
 
 header {
-  margin: -.5%;
+  margin: -1%;
   padding: 1em;
   -webkit-box-shadow: 0 -10px 20px 10px rgba(0,0,0,0.25);
   -moz-box-shadow: 0 -10px 20px 10px rgba(0,0,0,0.25);
   box-shadow: 0 -10px 20px 10px rgba(0,0,0,0.25);
 }
-header section {margin-bottom: 1%;}
-header section div {
-  display: inline-block;
-  width: 40%;
-  margin: auto auto;
-  margin-left: 9%;
+header section {
+  margin-bottom: 1%; 
+  text-align: center;
 }
-#title-img {
-  max-width: 100%;
-}
-
+section {margin: 2.5% auto;}
+nav {text-align: center;}
 ul li, a { 
   list-style: none; 
   text-decoration: none;
   display: inline-block;
-  min-width: 33%;
+  min-width: 20%;
   text-align: center;
 }
-li h3, li, div h3 {margin: 0;}
+li h3, li, div h3, figure {margin: 0;}
 a:hover {
   color: #3d3;
   cursor: pointer;
 }
-
-main {
-  padding-bottom: 1%;
-}
-
+main {padding-bottom: 1%;}
 footer {
-  margin: -.5%;
+  margin: -1%;
   padding: 1em;
+  text-align: center;
   -webkit-box-shadow: 0 -10px 20px -10px rgba(0,0,0,0.25);
   -moz-box-shadow: 0 -10px 20px -10px rgba(0,0,0,0.25);
   box-shadow: 0 -10px 20px -10px rgba(0,0,0,0.25);
 }
 
+.header {
+  display: inline-block;
+  width: 40%;
+  margin: auto auto;
+}
+#title-img {
+  max-width: 100%;
+}
+.events {text-align: center;}
+.events div {
+  display: inline-block;
+  max-width: 24%;
+  text-align: center;
+}
+.event-pics {
+  max-width: 100%;
+}
+.locations {text-align: center;}
+.locations div {
+  display: inline-block;
+  min-width: 18.5%;
+  text-align: center;
+  padding: 0 .5%;
+}
 .container {margin: 0 auto;}
-
 .content {
   display: inline-block;
   margin: 0 auto;
 }
-
 .company {
   padding-top: 4%;
   display: inline-block;
 }
 .company img {float: left;}
 .company h2, .company p {}
-
-.merchandise {
-  display: inline-block;
-}
+.merchandise {display: inline-block;}
 .merchandise img {float: right;}
 .merchandise h2, .merchandise p{}
 
