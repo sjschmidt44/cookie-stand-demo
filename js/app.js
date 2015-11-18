@@ -1,5 +1,3 @@
-'use strict'
-
 var hours = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
 var shops = [];
 var tbl;
@@ -14,8 +12,8 @@ function CookieShop(name, minCustomer, maxCustomer, avgCustomer) {
   this.dailyCookies = 0;
   shops.push(this);
 
-  this.generateHourly(); 
-  renderStore(tbl, this) 
+  this.generateHourly();
+  renderStore(tbl, this) ;
 }
 
 CookieShop.prototype.generateRandom = function(min, max) {
@@ -104,7 +102,7 @@ document.getElementById('new-store').addEventListener('submit', function(event) 
 
   for (var i = 0; i < shops.length; i++) {
     if (shops[i].id === store.replace(' ', '').toLowerCase()) {
-      exists = true; 
+      exists = true;
       break;
     }
   }
@@ -119,7 +117,7 @@ document.getElementById('new-store').addEventListener('submit', function(event) 
   event.target.min.value = null;
   event.target.max.value = null;
   event.target.avg.value = null;
-})
+});
 
 var pikePlace = new CookieShop('Pike Place', 17, 88, 5.2, 'pike');
 var seaTac = new CookieShop('SeaTac Airport', 6, 44, 1.2, 'seatac');

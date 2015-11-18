@@ -76,3 +76,6 @@ footer {
 .merchandise img {float: right;}
 .merchandise h2, .merchandise p{}
 
+.nav-login, .links {
+  display: none;
+}
