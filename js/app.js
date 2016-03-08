@@ -13,7 +13,7 @@ function CookieShop(name, minCustomer, maxCustomer, avgCustomer) {
   shops.push(this);
 
   this.generateHourly();
-  renderStore(tbl, this) ;
+  renderStore(tbl, this);
 }
 
 CookieShop.prototype.generateRandom = function(min, max) {
@@ -92,6 +92,13 @@ function renderUpdate(shop, min, max, avg) {
   trEl.childNodes[trEl.childNodes.length-1].textContent = shop.dailyCookies;
 }
 
+function clearInputs(event) {
+  event.target.store.value = null;
+  event.target.min.value = null;
+  event.target.max.value = null;
+  event.target.avg.value = null;
+}
+
 document.getElementById('new-store').addEventListener('submit', function(event) {
   event.preventDefault();
   var exists = false;
@@ -112,11 +119,7 @@ document.getElementById('new-store').addEventListener('submit', function(event) 
   } else {
     renderNew(store, min, max, avg);
   }
-
-  event.target.store.value = null;
-  event.target.min.value = null;
-  event.target.max.value = null;
-  event.target.avg.value = null;
+  clearInputs(event);
 });
 
 var pikePlace = new CookieShop('Pike Place', 17, 88, 5.2, 'pike');
