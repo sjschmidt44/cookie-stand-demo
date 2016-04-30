@@ -15,7 +15,7 @@ function CookieShop(name, minCustomer, maxCustomer, avgCustomer) {
   shops.push(this);
 
   CookieShop.generateHourly(this);
-  renderStore(tbl, this) 
+  CookieShop.renderStore(tbl, this)
 }
 
 CookieShop.prototype.generateRandom = function(min, max) {
@@ -30,7 +30,7 @@ CookieShop.generateHourly = function(obj) {
   }
 };
 
-function renderStore(tbl, store) {
+CookieShop.renderStore = function(tbl, store) {
     var trEl_two = document.createElement('tr');
     var thEl_four = document.createElement('th');
     thEl_four.textContent = store.name;
@@ -48,9 +48,9 @@ function renderStore(tbl, store) {
     trEl_two.appendChild(tdEl_two);
 
     tbl.appendChild(trEl_two);
-}
+};
 
-(function renderTable() {
+(CookieShop.renderTable = function() {
   tbl = document.createElement('table');
   tbl.id = 'table';
   var trEl_one = document.createElement('tr');
@@ -73,12 +73,12 @@ function renderStore(tbl, store) {
   document.getElementById('store_data').appendChild(tbl);
 })();
 
-function renderNew(name, minimum, maximum, average) {
+CookieShop.renderNew = function(name, minimum, maximum, average) {
   tbl = document.getElementById('table');
   var shop = new CookieShop(name, minimum, maximum, average);
 }
 
-function renderUpdate(shop, min, max, avg) {
+CookieShop.renderUpdate = function(shop, min, max, avg) {
   var trEl = document.getElementById(shop.name.replace(' ', '').toLowerCase());
 
   shop.minCustomer = min;
@@ -86,7 +86,7 @@ function renderUpdate(shop, min, max, avg) {
   shop.avgCustomer = avg;
   shop.hourlyCookies = [];
   shop.dailyCookies = 0;
-  shop.generateHourly();
+  CookieShop.generateHourly(shop);
 
   for (var i = 0; i < shop.hourlyCookies.length; i++) {
     trEl.childNodes[i + 1].textContent = shop.hourlyCookies[i];
@@ -110,9 +110,9 @@ document.getElementById('new-store').addEventListener('submit', function(event) 
   }
 
   if (exists === true) {
-    renderUpdate(shops[i], min, max, avg);
+    CookieShop.renderUpdate(shops[i], min, max, avg);
   } else {
-    renderNew(store, min, max, avg);
+    CookieShop.renderNew(store, min, max, avg);
   }
 
   event.target.store.value = null;
